@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">= 18.0.0",
+    "pnpm": ">= 7.0.0"
+  },
+  "packageManager": "pnpm@7.18.1",
+  "scripts": {
+    "dev": "pnpm --dir ./packages/vswift-epc dev",
+    "dev:tpls": "pnpm --dir ./packages/vswift-templates dev",
+    "build": "pnpm --dir ./packages/vswift-epc build",
+    "release": "pnpm --dir ./packages/vswift-epc release",
+    "build:common": "pnpm --dir ./packages/vswift-common build",
+    "release:common": "pnpm --dir ./packages/vswift-common release",
+    "build:cli": "pnpm --dir ./packages/vswift-cli build",
+    "release:cli": "pnpm --dir ./packages/vswift-cli release"
+  },
+  "devDependencies": {
+    "@vswift/cli": "workspace:*"
+  }
+}

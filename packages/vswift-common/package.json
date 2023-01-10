@@ -1,0 +1,39 @@
+{
+  "name": "@vswift/common",
+  "version": "0.0.3",
+  "description": "Common method for swift development.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "vswift-cli build -dt tsc",
+    "release": "pnpm build && release-it"
+  },
+  "dependencies": {
+    "vue": "^3.2.45",
+    "element-plus": "^2.2.26",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "vite": "^3.2.3",
+    "typescript": "^4.6.4",
+    "@types/lodash": "^4.14.182",
+    "release-it": "^15.5.1",
+    "@vswift/cli": "workspace:*"
+  }
+}
